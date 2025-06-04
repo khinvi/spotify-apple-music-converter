@@ -1,0 +1,157 @@
+.auth-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.auth-service {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 280px;
+  flex: 1;
+  max-width: 400px;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.service-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1d1d1f;
+}
+
+.auth-status {
+  text-align: center;
+}
+
+.auth-status p {
+  color: #86868b;
+  margin-bottom: 1rem;
+}
+
+.auth-status.authenticated {
+  text-align: left;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar.apple {
+  background: linear-gradient(135deg, #ff2d55 0%, #ff6b6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.user-email {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #86868b;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.auth-button.spotify {
+  background-color: #1db954;
+}
+
+.auth-button.spotify:hover {
+  background-color: #1aa34a;
+  transform: translateY(-1px);
+}
+
+.auth-button.apple {
+  background: linear-gradient(135deg, #ff2d55 0%, #ff6b6b 100%);
+}
+
+.auth-button.apple:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 45, 85, 0.3);
+}
+
+.auth-button.apple:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-button.logout {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  border: 1px solid #e5e5e7;
+}
+
+.auth-button.logout:hover {
+  background-color: #e5e5e7;
+}
+
+.auth-hint {
+  font-size: 0.875rem;
+  color: #86868b;
+  margin-top: 0.5rem;
+}
+
+.auth-arrow {
+  font-size: 2rem;
+  color: #86868b;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .auth-arrow {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .auth-section {
+    flex-direction: column;
+  }
+  
+  .auth-service {
+    max-width: 100%;
+    width: 100%;
+  }
+}

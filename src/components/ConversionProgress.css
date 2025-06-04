@@ -1,0 +1,154 @@
+.conversion-progress {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.progress-header {
+  margin-bottom: 1.5rem;
+}
+
+.progress-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1d1d1f;
+}
+
+.current-track {
+  margin: 0;
+  color: #86868b;
+  font-size: 0.875rem;
+}
+
+.progress-bar-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  height: 24px;
+  background: #f5f5f7;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #1db954 0%, #1aa34a 100%);
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 30px 30px;
+  animation: progress-animation 1s linear infinite;
+}
+
+@keyframes progress-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.progress-percentage {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  color: #1d1d1f;
+  font-size: 0.875rem;
+}
+
+.progress-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #f5f5f7;
+  border-radius: 8px;
+}
+
+.stat.success {
+  background: #f0f9f4;
+}
+
+.stat.failed {
+  background: #fef2f2;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #86868b;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.stat.success .stat-value {
+  color: #1db954;
+}
+
+.stat.failed .stat-value {
+  color: #ff2d55;
+}
+
+.completion-summary {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e5e7;
+}
+
+.success-rate {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  color: #1d1d1f;
+}
+
+.success-rate strong {
+  color: #1db954;
+}
+
+.failed-message {
+  margin: 0;
+  color: #86868b;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+  .progress-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
