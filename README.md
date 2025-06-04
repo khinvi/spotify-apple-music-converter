@@ -4,7 +4,7 @@ A free, open-source web application that converts your Spotify playlists to Appl
 
 ## 🚀 Demo
 
-[Live Demo](https://YOUR_USERNAME.github.io/spotify-apple-music-converter)
+[Live Demo](https://khinvi.github.io/spotify-apple-music-converter)
 
 ## ✨ Features
 
