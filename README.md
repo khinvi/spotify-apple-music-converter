@@ -1,10 +1,12 @@
 # Spotify to Apple Music Playlist Converter 🎵
 
+![Status](https://img.shields.io/badge/Status-In_Progress-yellow)
+
 A free, open-source web application that converts your Spotify playlists to Apple Music with high accuracy matching.
 
 ## 🚀 Demo
 
-[Live Demo](https://YOUR_USERNAME.github.io/spotify-apple-music-converter)
+[Live Demo](https://khinvi.github.io/spotify-apple-music-converter)
 
 ## ✨ Features
 
